@@ -1,7 +1,4 @@
-# Hyperledger Fabric Asset Management System
 
-## Overview
-This project is a **Hyperledger Fabric** blockchain application for managing assets securely. It includes functionalities for creating, reading, updating, and deleting assets, with role-based access control (RBAC) ensuring that only authorized users can perform specific actions.
 # Hyperledger Fabric Asset Management System
 
 ## Overview
