@@ -48,7 +48,7 @@ npm install
 ### 3. Start the Hyperledger Fabric Network
 ```sh
 cd Network/
-./startNetwor.sh
+./startNetwork.sh
 ```
 
 ### 4. Run the Client Application
