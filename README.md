@@ -59,27 +59,27 @@ node index.js
 
 #### Create an Asset
 ```sh
-node createAsset.js
+node CreateAsset.js
 ```
 
 #### Read an Asset
 ```sh
-node readAsset.js
+node ReadAsset.js
 ```
 
 #### Update an Asset
 ```sh
-node updateAsset.js
+node UpdateAsset.js
 ```
 
 #### Delete an Asset
 ```sh
-node deleteAsset.js
+node DeleteAsset.js
 ```
 
 #### Get All Assets (Auditor Only)
 ```sh
-node getAllAssets.js
+node GetAllAssets.js
 ```
 
 
@@ -144,6 +144,5 @@ Feel free to fork and submit a **Pull Request** if you would like to contribute!
 ## License
 This project is open-source and available under the **MIT License**.
 
-## Contact
-For any questions, reach out at **your.email@example.com** or visit [your GitHub](https://github.com/your-username).
+
 
