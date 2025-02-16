@@ -20,10 +20,10 @@ Ensure you have the following installed:
 
 ## Project Structure
 ```
-📂 hyperledger-fabric-app/
-├── 📂 chaincode/       # Smart contract logic
-├── 📂 client/          # Client-side interaction with the blockchain
-├── 📂 network/         # Network configuration and setup
+📂 Simplify-Task/
+├── 📂 Chaincode/       # Smart contract logic
+├── 📂 Client/          # Client-side interaction with the blockchain
+├── 📂 Network/         # Network configuration and setup
 ├── 📜 package.json     # Node.js dependencies
 ├── 📜 .gitignore       # Ignored files (e.g., node_modules)
 └── 📜 README.md        # Project documentation
@@ -32,8 +32,8 @@ Ensure you have the following installed:
 ## Setup & Installation
 ### 1. Clone the Repository
 ```sh
-git clone https://github.com/your-username/hyperledger-fabric-app.git
-cd hyperledger-fabric-app
+git clone https://git@github.com:AshishS2407/Simplify-Task.git
+cd Simplify-Task
 ```
 
 ### 2. Install Dependencies
@@ -43,17 +43,16 @@ npm install
 
 ### 3. Start the Hyperledger Fabric Network
 ```sh
-cd network/
-./startFabric.sh
+cd Network/
+./startNetwor.sh
 ```
 
-### 4. Deploy the Chaincode
+### 4. Run the Client Application
 ```sh
-cd chaincode/
-./deployChaincode.sh
+cd Client/
+node index.js
 ```
 
-### 5. Run the Client Application
 #### Create an Asset
 ```sh
 node createAsset.js
