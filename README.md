@@ -2,6 +2,10 @@
 
 ## Overview
 This project is a **Hyperledger Fabric** blockchain application for managing assets securely. It includes functionalities for creating, reading, updating, and deleting assets, with role-based access control (RBAC) ensuring that only authorized users can perform specific actions.
+# Hyperledger Fabric Asset Management System
+
+## Overview
+This project is a **Hyperledger Fabric** blockchain application for managing assets securely. It includes functionalities for creating, reading, updating, and deleting assets, with role-based access control (RBAC) ensuring that only authorized users can perform specific actions.
 
 ## Features
 - **Admin:** Can create, update, and delete assets.
@@ -78,6 +82,53 @@ node deleteAsset.js
 node getAllAssets.js
 ```
 
+
+
+## Server-Side API (Express.js)
+The project includes a **REST API** built with Express.js to interact with the Hyperledger Fabric network.
+
+### API Endpoints
+| Method | Endpoint | Description |
+|--------|---------|-------------|
+| POST | `/api/assets/create` | Creates a new asset |
+| GET | `/api/assets/:id` | Fetches asset details |
+| PUT | `/api/assets/update/:id` | Updates an asset value |
+| DELETE | `/api/assets/delete/:id` | Deletes an asset |
+| GET | `/api/assets` | Fetches all assets (Auditor only) |
+
+## Testing with Postman
+1. **Start the server**: Ensure the server is running on **http://localhost:3000**
+2. **Open Postman** and create requests for the following:
+   - **Create an Asset:**
+     - Method: `POST`
+     - URL: `http://localhost:3000/api/assets/create`
+     - Body (JSON):
+       ```json
+       {
+         "assetId": "Asset-100",
+         "owner": "user1",
+         "value": "5000"
+       }
+       ```
+   - **Read an Asset:**
+     - Method: `GET`
+     - URL: `http://localhost:3000/api/assets/Asset-100`
+   - **Update an Asset:**
+     - Method: `PUT`
+     - URL: `http://localhost:3000/api/assets/update/Asset-100`
+     - Body (JSON):
+       ```json
+       {
+         "newValue": "6000"
+       }
+       ```
+   - **Delete an Asset:**
+     - Method: `DELETE`
+     - URL: `http://localhost:3000/api/assets/delete/Asset-100`
+   - **Get All Assets (Auditor Only):**
+     - Method: `GET`
+     - URL: `http://localhost:3000/api/assets`
+
 ## Smart Contract Functions
 | Function       | Role  | Description |
 |---------------|-------|-------------|
@@ -94,4 +145,5 @@ Feel free to fork and submit a **Pull Request** if you would like to contribute!
 This project is open-source and available under the **MIT License**.
 
 ## Contact
-For any questions, reach out at **ashishanandhu78@gmail.com** or visit [your GitHub](https://github.com/your-username).
+For any questions, reach out at **your.email@example.com** or visit [your GitHub](https://github.com/your-username).
+
