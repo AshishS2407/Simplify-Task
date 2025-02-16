@@ -119,7 +119,9 @@ The project includes a **REST API** built with Express.js to interact with the H
      - Body (JSON):
        ```json
        {
-         "newValue": "6000"
+          "assetId": "Asset-100",
+          "newOwner": "user1",
+          "newValue": "6000"
        }
        ```
    - **Delete an Asset:**
