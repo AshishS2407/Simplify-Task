@@ -98,7 +98,7 @@ The project includes a **REST API** built with Express.js to interact with the H
 2. **Open Postman** and create requests for the following:
    - **Create an Asset:**
      - Method: `POST`
-     - URL: `http://localhost:3000/api/assets/create`
+     - URL: `http://localhost:3000/assets/`
      - Body (JSON):
        ```json
        {
@@ -109,10 +109,10 @@ The project includes a **REST API** built with Express.js to interact with the H
        ```
    - **Read an Asset:**
      - Method: `GET`
-     - URL: `http://localhost:3000/api/assets/Asset-100`
+     - URL: `http://localhost:3000/assets/Asset-100`
    - **Update an Asset:**
      - Method: `PUT`
-     - URL: `http://localhost:3000/api/assets/update/Asset-100`
+     - URL: `http://localhost:3000/assets/update/Asset-100`
      - Body (JSON):
        ```json
        {
@@ -123,10 +123,10 @@ The project includes a **REST API** built with Express.js to interact with the H
        ```
    - **Delete an Asset:**
      - Method: `DELETE`
-     - URL: `http://localhost:3000/api/assets/delete/Asset-100`
+     - URL: `http://localhost:3000/assets/Asset-100`
    - **Get All Assets (Auditor Only):**
      - Method: `GET`
-     - URL: `http://localhost:3000/api/assets`
+     - URL: `http://localhost:3000/allassets`
 
 ## Smart Contract Functions
 | Function       | Role  | Description |
