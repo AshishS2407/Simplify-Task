@@ -45,7 +45,7 @@ npm install
 ### 3. Start the Hyperledger Fabric Network
 ```sh
 cd Network/
-./startNetwork.sh
+./startNetwor.sh
 ```
 
 ### 4. Run the Client Application
@@ -87,11 +87,11 @@ The project includes a **REST API** built with Express.js to interact with the H
 ### API Endpoints
 | Method | Endpoint | Description |
 |--------|---------|-------------|
-| POST | `/api/assets/create` | Creates a new asset |
-| GET | `/api/assets/:id` | Fetches asset details |
-| PUT | `/api/assets/update/:id` | Updates an asset value |
-| DELETE | `/api/assets/delete/:id` | Deletes an asset |
-| GET | `/api/assets` | Fetches all assets (Auditor only) |
+| POST | `/assets` | Creates a new asset |
+| GET | `/assets/:id` | Fetches asset details |
+| PUT | `/assets/updateasset` | Updates an asset value |
+| DELETE | `/assets/delete/:id` | Deletes an asset |
+| GET | `/allassets` | Fetches all assets (Auditor only) |
 
 ## Testing with Postman
 1. **Start the server**: Ensure the server is running on **http://localhost:3000**
@@ -112,7 +112,7 @@ The project includes a **REST API** built with Express.js to interact with the H
      - URL: `http://localhost:3000/assets/Asset-100`
    - **Update an Asset:**
      - Method: `PUT`
-     - URL: `http://localhost:3000/assets/update/Asset-100`
+     - URL: `http://localhost:3000/updateasset`
      - Body (JSON):
        ```json
        {
