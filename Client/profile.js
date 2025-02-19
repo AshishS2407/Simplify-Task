@@ -7,7 +7,7 @@ let profile = {
         "tlsCertPath": "../Network/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt",
         "peerEndpoint": "localhost:7051",
         "peerHostAlias": "peer0.org1.example.com",
-        "mspId": "org1-sample-com"
+        "mspId": "org1-example-com"
     },
     org1auditor: { 
         "cryptoPath": "../Network/organizations/peerOrganizations/org1.example.com",
@@ -16,7 +16,7 @@ let profile = {
         "tlsCertPath": "../Network/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt",
         "peerEndpoint": "localhost:7051",
         "peerHostAlias": "peer0.org1.example.com",
-        "mspId": "org1-sample-com"
+        "mspId": "org1-example-com"
     },
     org1user: { 
         "cryptoPath": "../Network/organizations/peerOrganizations/org1.example.com",
@@ -25,7 +25,7 @@ let profile = {
         "tlsCertPath": "../Network/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt",
         "peerEndpoint": "localhost:7051",
         "peerHostAlias": "peer0.org1.example.com",
-        "mspId": "org1-sample-com"
+        "mspId": "org1-example-com"
     }
 };
 

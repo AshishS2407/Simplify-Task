@@ -57,9 +57,12 @@ router.get('/assets/:id', async (req, res) => {
     }
 });
 
-router.put('/updateasset', async (req, res) => {
+
+router.put('/assets/:id', async (req, res) => {
     try {
-        const { assetId, newOwner, newValue } = req.body;
+        const assetId = req.params.id;
+        const { newOwner, newValue } = req.body;
+        
         const result = await userClient.submitTxn(
             "org1admin",
             "mychannel",
@@ -69,11 +72,13 @@ router.put('/updateasset', async (req, res) => {
             newOwner,
             newValue
         );
+
         res.json({ message: "Asset updated successfully", result: new TextDecoder().decode(result) });
     } catch (error) {
-        res.status(500).json({ error: `Failed to update asset ${req.body.assetId}`, details: error.message });
+        res.status(500).json({ error: `Failed to update asset ${req.params.id}`, details: error.message });
     }
 });
+
 
 
 router.delete('/assets/:id', async (req, res) => {
