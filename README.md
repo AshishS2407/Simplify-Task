@@ -21,7 +21,7 @@ Ensure you have the following installed:
 
 ## Project Structure
 ```
-📂 Simplify-Task/
+📂 Simplyfi-Task/
 ├── 📂 Chaincode/       # Smart contract logic
 ├── 📂 Client/          # Client-side interaction with the blockchain
 ├── 📂 Network/         # Network configuration and setup
@@ -33,8 +33,8 @@ Ensure you have the following installed:
 ## Setup & Installation
 ### 1. Clone the Repository
 ```sh
-git clone https://git@github.com:AshishS2407/Simplify-Task.git
-cd Simplify-Task
+git clone https://git@github.com:AshishS2407/Simplyfi-Task.git
+cd Simplyfi-Task
 ```
 
 ### 2. Install Dependencies
