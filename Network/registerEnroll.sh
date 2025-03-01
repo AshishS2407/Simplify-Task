@@ -114,14 +114,15 @@ fabric-ca-client register --caname ca-org1 --id.name org1admin --id.secret org1a
 
   # Enroll user1
       echo "Enrolling a Regular User in Org1"
-   fabric-ca-client enroll -u https://org1user:org1userpw@localhost:7054  --caname ca-org1 --tls.certfiles "${PWD}/organizations/fabric-ca/org1/ca-cert.pem"  --mspdir "${PWD}/organizations/peerOrganizations/org1.example.com/users/User@org1.example.com/msp"  --enrollment.attrs "role"
-
+   fabric-ca-client enroll -u https://org1user:org1userpw@localhost:7054  --caname ca-org1 --tls.certfiles "${PWD}/organizations/fabric-ca/org1/ca-cert.pem"  --mspdir "${PWD}/organizations/peerOrganizations/org1.example.com/users/User@org1.example.com/msp"  --enrollment.attrs "hf.EnrollmentID,role"  --csr.hosts "peer0.org1.example.com"
+  { set +x; } 2>/dev/null
   cp "${PWD}/organizations/peerOrganizations/org1.example.com/msp/config.yaml" \
      "${PWD}/organizations/peerOrganizations/org1.example.com/users/User@org1.example.com/msp/"
+
   # Enroll auditor
      echo "Enrolling the Org1 Auditor"
       set -x
-fabric-ca-client enroll -u https://org1auditor:org1auditorpw@localhost:7054 --caname ca-org1 --tls.certfiles "${PWD}/organizations/fabric-ca/org1/ca-cert.pem" --mspdir "${PWD}/organizations/peerOrganizations/org1.example.com/users/Auditor@org1.example.com/msp" --enrollment.attrs "role"
+fabric-ca-client enroll -u https://org1auditor:org1auditorpw@localhost:7054 --caname ca-org1 --tls.certfiles "${PWD}/organizations/fabric-ca/org1/ca-cert.pem" --mspdir "${PWD}/organizations/peerOrganizations/org1.example.com/users/Auditor@org1.example.com/msp" --enrollment.attrs "hf.EnrollmentID,role" --csr.hosts "peer0.org1.example.com"
    { set +x; } 2>/dev/null
 
   cp "${PWD}/organizations/peerOrganizations/org1.example.com/msp/config.yaml" \
@@ -130,7 +131,7 @@ fabric-ca-client enroll -u https://org1auditor:org1auditorpw@localhost:7054 --ca
   # Enroll org admin
     echo "Enrolling the Org1 Admin"
       set -x
-fabric-ca-client enroll -u https://org1admin:org1adminpw@localhost:7054 --caname ca-org1 --tls.certfiles "${PWD}/organizations/fabric-ca/org1/ca-cert.pem" --mspdir "${PWD}/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp" --enrollment.attrs "role"     
+fabric-ca-client enroll -u https://org1admin:org1adminpw@localhost:7054 --caname ca-org1 --tls.certfiles "${PWD}/organizations/fabric-ca/org1/ca-cert.pem" --mspdir "${PWD}/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp" --enrollment.attrs "hf.EnrollmentID,role" --csr.hosts "peer0.org1.example.com"
  { set +x; } 2>/dev/null
 
  cp "${PWD}/organizations/peerOrganizations/org1.example.com/msp/config.yaml" \

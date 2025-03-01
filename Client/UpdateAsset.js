@@ -7,7 +7,7 @@ userClient.submitTxn(
     "Assets",                 
     "UpdateAsset",          
     "Asset-200",            
-    "user2",                
+    "org1user",                
     "7000"                  
 ).then(result => {
     console.log(new TextDecoder().decode(result));
