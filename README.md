@@ -2,7 +2,7 @@
 # Hyperledger Fabric Asset Management System
 
 ## Overview
-This project is a **Hyperledger Fabric** blockchain application for managing assets securely. It includes functionalities for creating, reading, updating, and deleting assets, with role-based access control (RBAC) ensuring that only authorized users can perform specific actions.
+This project is a **Hyperledger Fabric** blockchain application for managing assets securely. It includes functionalities for creating, reading, updating, and deleting assets, with attribute-based access control (ABAC) ensuring that only authorized users can perform specific actions.
 
 ## Features
 - **Admin:** Can create, update, and delete assets.
@@ -16,7 +16,7 @@ Ensure you have the following installed:
 - **Node.js** (v16+ recommended)
 - **npm** 
 - **Docker & Docker Compose**
-- **Hyperledger Fabric** (v2.2 or later)
+- **Hyperledger Fabric** (v2.5)
 - **Fabric Samples** & CLI Tools
 
 ## Project Structure
@@ -89,8 +89,8 @@ The project includes a **REST API** built with Express.js to interact with the H
 |--------|---------|-------------|
 | POST | `/assets` | Creates a new asset |
 | GET | `/assets/:id` | Fetches asset details |
-| PUT | `/assets/updateasset` | Updates an asset value |
-| DELETE | `/assets/delete/:id` | Deletes an asset |
+| PUT | `/assets/:id` | Updates an asset value |
+| DELETE | `/assets/:id` | Deletes an asset |
 | GET | `/allassets` | Fetches all assets (Auditor only) |
 
 ## Testing with Postman
@@ -103,7 +103,7 @@ The project includes a **REST API** built with Express.js to interact with the H
        ```json
        {
          "assetId": "Asset-100",
-         "owner": "user1",
+         "owner": "org1user",
          "value": "5000"
        }
        ```
@@ -112,12 +112,12 @@ The project includes a **REST API** built with Express.js to interact with the H
      - URL: `http://localhost:3000/assets/Asset-100`
    - **Update an Asset:**
      - Method: `PUT`
-     - URL: `http://localhost:3000/updateasset`
+     - URL: `http://localhost:3000/assests/Asset-100
      - Body (JSON):
        ```json
        {
           "assetId": "Asset-100",
-          "newOwner": "user1",
+          "newOwner": "org1user",
           "newValue": "6000"
        }
        ```
